@@ -18,6 +18,6 @@ yarn start
 
 docker build  --no-cache -t sling-web-img .
 
-docker run -d --name sling-web --rm -v $(pwd):/usr/src/app-sling-web --expose 3000 --net nginx-proxy -e VIRTUAL_HOST=dev-sling-web.tk -e VIRTUAL_PROTO=http -e VIRTUAL_PORT=3000 sling-web-img
+docker run -d --name sling-web --rm -v $(pwd):/usr/src/app-sling-web --expose 3000 --net nginx-proxy -e VIRTUAL_HOST=sling-web.tk -e VIRTUAL_PROTO=http -e VIRTUAL_PORT=3000 sling-web-img
 
 docker exec -ti sling-web /bin/bash
